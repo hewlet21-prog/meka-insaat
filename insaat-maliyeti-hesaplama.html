@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>İnşaat Maliyeti Hesaplama | Erzurum 2026 Güncel | ME-KA İnşaat</title>
+  <meta name="description" content="Erzurum'da 2026 yılı inşaat maliyeti nasıl hesaplanır? Arsa, malzeme, işçilik, ruhsat ve beton maliyet kalemleri. 100 m² ev maliyeti örnek hesaplama.">
+  <meta name="keywords" content="inşaat maliyeti hesaplama, Erzurum inşaat maliyeti 2026, ev yapma maliyeti, beton maliyeti, inşaat metrekare fiyatı, ME-KA İnşaat">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Erzurum İnşaat Maliyeti 2026 | ME-KA İnşaat">
+  <meta property="og:description" content="Erzurum'da inşaat maliyeti kalemleri ve 100 m² ev için güncel maliyet hesabı.">
+  <meta property="og:image" content="hizmetler/1.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="hizmetler/1.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .detail-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hizmetler/1.jpg') center/cover;
+      padding: 4rem 0;
+      text-align: center;
+      color: white;
+    }
+    .detail-hero h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 800;
+      max-width: 900px;
+      margin: 0 auto 1rem;
+      line-height: 1.3;
+    }
+    .blog-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      color: #E5E7EB;
+      font-size: 0.95rem;
+    }
+    .detail-content {
+      max-width: 850px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .content-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 1.5rem 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .detail-content h2 {
+      font-size: 1.8rem;
+      margin: 2.2rem 0 1.2rem;
+      color: #1F2937;
+      font-weight: 700;
+      border-left: 5px solid #F59E0B;
+      padding-left: 1.2rem;
+    }
+    .detail-content h3 {
+      font-size: 1.4rem;
+      margin: 1.8rem 0 1rem;
+      color: #1F2937;
+      font-weight: 600;
+    }
+    .detail-content p {
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      color: #4B5563;
+    }
+    .detail-content ul {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+    .detail-content li {
+      margin-bottom: 0.5rem;
+      color: #4B5563;
+    }
+    .calculation-box {
+      background: var(--gray-50);
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      border-left: 6px solid var(--primary);
+      margin: 2rem 0;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .comparison-table th {
+      background: #F59E0B;
+      color: #1F2937;
+      font-weight: 700;
+      padding: 1rem;
+      text-align: left;
+    }
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #E5E7EB;
+      background: white;
+    }
+    .cta-box {
+      background: linear-gradient(145deg, #FDE68A, #FCD34D);
+      padding: 2rem 2rem;
+      border-radius: 24px;
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+    }
+    .cta-box h3 {
+      margin-top: 0;
+      color: #1F2937;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .btn-primary-large {
+      background: #F59E0B;
+      color: #1F2937;
+      padding: 0.9rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      border: none;
+      font-size: 1.1rem;
+    }
+    .btn-primary-large:hover {
+      background: #B45309;
+      transform: scale(1.03);
+    }
+    .btn-outline-light {
+      background: transparent;
+      border: 2px solid #1F2937;
+      color: #1F2937;
+      padding: 0.9rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+    .btn-outline-light:hover {
+      background: #1F2937;
+      color: white;
+    }
+    .tags-section {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      background: #F3F4F6;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: #4B5563;
+    }
+    @media (max-width: 640px) {
+      .detail-content { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo"><span>ME-KA</span> İNŞAAT</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Hizmetler ▼</button>
+          <div class="dropdown-menu">
+            <a href="hizmetler/yikim.html">Yıkım</a>
+            <a href="hizmetler/hafriyat.html">Hafriyat</a>
+            <a href="hizmetler/agrega.html">Agrega</a>
+            <a href="hizmetler/beton.html">Beton</a>
+          </div>
+        </div>
+        <a href="projeler.html" class="nav-link">Projeler</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="kariyer.html" class="nav-link">Kariyer</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+      </nav>
+      <a href="https://wa.me/905384865840?text=Merhaba%2C%20Erzurum%20in%C5%9Faat%20maliyetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="whatsapp-btn" target="_blank">📱 WhatsApp</a>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a>
+      <div class="dropdown"><button class="dropdown-toggle">Hizmetler ▼</button><div class="dropdown-menu"><a href="hizmetler/yikim.html">Yıkım</a><a href="hizmetler/hafriyat.html">Hafriyat</a><a href="hizmetler/agrega.html">Agrega</a><a href="hizmetler/beton.html">Beton</a></div></div>
+      <a href="projeler.html">Projeler</a><a href="blog.html">Blog</a><a href="kariyer.html">Kariyer</a><a href="iletisim.html">İletişim</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="detail-hero">
+    <div class="container">
+      <h1>İnşaat Maliyeti Hesaplama <br> (Erzurum Özel 2026 Güncel Rehber)</h1>
+      <div class="blog-meta">
+        <span>📅 2026 Güncel</span>
+        <span>🏷️ Maliyet ve Planlama</span>
+        <span>⏱️ 9 dk okuma</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- İÇERİK -->
+  <article class="container">
+    <div class="detail-content">
+      
+      <img src="hizmetler/5.jpg" alt="Erzurum İnşaat Maliyeti Hesaplama" class="content-img" onerror="this.src='https://via.placeholder.com/800x400/374151/F59E0B?text=Erzurum+%C4%B0n%C5%9Faat+Maliyeti'">
+      
+      <p>Ev veya iş yeri inşa etmek, hayatınızdaki en büyük finansal kararlardan biridir. Özellikle Erzurum gibi malzeme ve işçilik dinamiklerinin farklı olduğu bir şehirde, doğru bir maliyet hesabı yapmak, bütçenizi kontrol altında tutmanızı ve sürprizlerle karşılaşmamanızı sağlar. Bu kapsamlı rehberde, 2026 yılı itibarıyla Erzurum'da inşaat maliyetini oluşturan tüm kalemleri (arsa, malzeme, işçilik, ruhsat, beton vb.) ve örnek bir 100 m² ev için yaklaşık maliyet hesaplamasını bulacaksınız.</p>
+
+      <h2>İnşaat Maliyetini Oluşturan Ana Kalemler</h2>
+      <p>Bir inşaat projesinin toplam maliyeti aşağıdaki ana başlıklardan oluşur. Her bir kalemin toplam maliyet içindeki yaklaşık payı da belirtilmiştir.</p>
+      <table class="comparison-table">
+        <thead><tr><th>Maliyet Kalemi</th><th>Yaklaşık Pay (%)</th><th>Açıklama</th></tr></thead>
+        <tbody>
+          <tr><td>🏡 Arsa Bedeli</td><td>20-30%</td><td>Konum, imar durumu, büyüklük</td></tr>
+          <tr><td>🧱 Kaba İnşaat (Beton, Demir, Duvar)</td><td>25-35%</td><td>Beton sınıfı, demir tonajı, duvar malzemesi</td></tr>
+          <tr><td>🔧 İnce İşler (Sıva, Şap, Fayans, Boya)</td><td>15-20%</td><td>Malzeme kalitesi ve işçilik</td></tr>
+          <tr><td>🚪 Doğrama ve Kapı-Pencere</td><td>8-12%</td><td>PVC veya ahşap, ısıcam özellikleri</td></tr>
+          <tr><td>⚡ Mekanik ve Elektrik Tesisatı</td><td>10-15%</td><td>Kombi, tesisat boruları, elektrik panosu</td></tr>
+          <tr><td>📋 Ruhsat, Harçlar ve Proje Giderleri</td><td>3-5%</td><td>Belediye harçları, statik-mimari proje</td></tr>
+          <tr><td>🚛 Nakliye ve Şantiye Giderleri</td><td>2-3%</td><td>Malzeme nakliyesi, şantiye elektrik-su</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Erzurum'da 2026 Yılı İnşaat m² Birim Maliyetleri (Yaklaşık)</h2>
+      <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı tarafından her yıl açıklanan "Mimarlık ve Mühendislik Hizmet Bedelleri" ile piyasa rayiçleri birleştirildiğinde, Erzurum için 2026 yılı ortalama inşaat m² maliyetleri şu aralıklardadır:</p>
+      <ul>
+        <li><strong>1. Sınıf (Lüks) Konut:</strong> 25.000 - 35.000 TL/m²</li>
+        <li><strong>2. Sınıf (Standart) Konut:</strong> 18.000 - 25.000 TL/m²</li>
+        <li><strong>3. Sınıf (Ekonomik) Konut:</strong> 14.000 - 18.000 TL/m²</li>
+        <li><strong>İş Yeri / Ofis:</strong> 20.000 - 30.000 TL/m²</li>
+      </ul>
+      <p style="font-size:0.9rem;">*Belirtilen fiyatlar KDV hariç, ortalama piyasa rayiçleridir. Proje özelliklerine ve malzeme seçimine göre değişkenlik gösterir.</p>
+
+      <h2>Örnek Hesaplama: Erzurum'da 100 m² Müstakil Ev Maliyeti (2026)</h2>
+      <p>100 m² oturumlu, 2 katlı (toplam 200 m² inşaat alanı), standart (2. sınıf) malzeme ve işçilik kullanılan müstakil bir konut için yaklaşık maliyet kalemleri:</p>
+      
+      <div class="calculation-box">
+        <h3 style="margin-top:0; margin-bottom:1rem;">🏗️ Kaba İnşaat</h3>
+        <ul style="margin-bottom:1.5rem;">
+          <li><strong>Beton (C30, ~70 m³):</strong> 70 x 3.000 TL = 210.000 TL</li>
+          <li><strong>Demir (nervürlü, ~8 ton):</strong> 8 x 28.000 TL = 224.000 TL</li>
+          <li><strong>Duvar (gazbeton/tuğla):</strong> ~150.000 TL</li>
+          <li><strong>İşçilik (kaba):</strong> ~250.000 TL</li>
+        </ul>
+        
+        <h3 style="margin-bottom:1rem;">🔧 İnce İşler + Tesisat</h3>
+        <ul style="margin-bottom:1.5rem;">
+          <li><strong>Sıva, şap, alçı:</strong> ~180.000 TL</li>
+          <li><strong>Elektrik tesisatı:</strong> ~80.000 TL</li>
+          <li><strong>Sıhhi tesisat + kombi:</strong> ~120.000 TL</li>
+          <li><strong>Fayans, seramik, boya:</strong> ~150.000 TL</li>
+          <li><strong>PVC doğrama (ısıcam):</strong> ~130.000 TL</li>
+          <li><strong>İç kapılar, mutfak dolabı:</strong> ~100.000 TL</li>
+        </ul>
+        
+        <h3 style="margin-bottom:1rem;">📋 Diğer Giderler</h3>
+        <ul style="margin-bottom:0;">
+          <li><strong>Ruhsat, proje, harçlar:</strong> ~80.000 TL</li>
+          <li><strong>Nakliye, şantiye giderleri:</strong> ~40.000 TL</li>
+        </ul>
+        
+        <hr style="margin:1.5rem 0; border-color:#ddd;">
+        <p style="font-size:1.4rem; font-weight:800; color:var(--primary); text-align:right;">TOPLAM ~ 1.564.000 TL</p>
+        <p style="font-size:0.9rem; text-align:right;">(Arsa bedeli hariçtir)</p>
+      </div>
+      <p>👉 Bu hesaplama, ortalama piyasa rayiçleri ile yapılmış tahmini bir örnektir. Kesin maliyet için güncel fiyat teklifi alınması gerekmektedir.</p>
+
+      <h2>Erzurum'da İnşaat Maliyetini Etkileyen Yerel Faktörler</h2>
+      <ul>
+        <li>❄️ <strong>Kış Koşulları:</strong> Erzurum'da kış aylarında inşaat faaliyetleri yavaşlar. Beton dökümü için antifriz katkı ve ısı yalıtımı maliyeti eklenir. Ayrıca çalışma süresi kısaldığı için işçilik verimliliği düşer, bu da maliyeti dolaylı olarak artırır.</li>
+        <li>🚛 <strong>Nakliye Mesafeleri:</strong> Erzurum'da kaliteli agrega ocakları ve beton santralleri şehir merkezine belirli bir mesafededir. Nakliye maliyetleri, şantiyenizin konumuna göre değişkenlik gösterir.</li>
+        <li>📏 <strong>Deprem Yönetmeliği:</strong> Erzurum 2. derece deprem bölgesinde yer aldığı için, yapıların daha yüksek dayanımlı beton (C30+) ve daha fazla demir donatı ile inşa edilmesi zorunludur. Bu durum, kaba inşaat maliyetini Türkiye ortalamasına göre bir miktar artırır.</li>
+      </ul>
+
+      <h2>İnşaat Maliyetini Düşürmek İçin İpuçları</h2>
+      <ul>
+        <li>✅ Toplu malzeme alımı yaparak birim fiyatlarda indirim kazanın.</li>
+        <li>✅ İnşaat sezonunda (Mayıs-Eylül) çalışarak kış ek maliyetlerinden kaçının.</li>
+        <li>✅ Güvenilir ve tek elden hizmet veren (beton, agrega, hafriyat) bir tedarikçi ile çalışarak nakliye ve koordinasyon maliyetlerini azaltın.</li>
+        <li>✅ Proje aşamasında mimari ve statik optimizasyon yaparak gereksiz beton ve demir sarfiyatının önüne geçin.</li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>📞 Erzurum'da Projenize Özel Güncel Maliyet Analizi İçin Bize Ulaşın</h3>
+        <p style="margin-bottom: 0.5rem;">ME-KA İnşaat olarak, beton, agrega ve hafriyat tedariğinde rekabetçi fiyatlarımızla inşaat maliyetinizi optimize ediyoruz. Ücretsiz keşif ve fiyat teklifi alın.</p>
+        <div class="btn-group">
+          <a href="tel:+905384865840" class="btn-primary-large">📞 Hemen Ara</a>
+          <a href="https://wa.me/905384865840?text=Merhaba%2C%20Erzurum%20in%C5%9Faat%20maliyeti%20hesab%C4%B1%20ve%20fiyat%20teklifi%20almak%20istiyorum." class="btn-outline-light" target="_blank">💬 WhatsApp'tan Yaz</a>
+          <a href="teklif-al.html" class="btn-primary-large" style="background:#1F2937; color:white;">📍 Ücretsiz Keşif</a>
+        </div>
+        <p style="font-size:0.9rem; margin-top:1rem;">✅ Rekabetçi fiyat + kaliteli malzeme + zamanında teslim</p>
+      </div>
+
+      <h2>Sık Sorulan Sorular</h2>
+      <p><strong>Erzurum'da inşaat m² maliyeti ne kadar?</strong><br>2026 yılı için standart bir konutta 18.000 - 25.000 TL/m² arasındadır. Lüks konutlarda bu rakam 35.000 TL'ye kadar çıkabilir.</p>
+      <p><strong>İnşaat maliyetinin yüzde kaçı betona gider?</strong><br>Kaba inşaatın yaklaşık %30-40'ı beton maliyetidir. Toplam inşaat maliyeti içinde ise betonun payı %10-15 civarındadır.</p>
+      <p><strong>Arsa bedeli hariç 100 m² ev kaça mal olur?</strong><br>Yukarıdaki örnek hesaplamada görüldüğü gibi, 2026 yılı için yaklaşık 1.5 - 1.8 milyon TL arasında bir maliyet öngörülebilir.</p>
+      <p><strong>Erzurum'da inşaat yapmak diğer illere göre daha mı maliyetli?</strong><br>Deprem yönetmeliği gereği daha yüksek beton sınıfı kullanımı ve kış şartları nedeniyle alınan ek önlemler, maliyeti Türkiye ortalamasına göre %5-10 artırabilir.</p>
+
+      <div class="tags-section">
+        <span class="tag">#İnşaatMaliyeti</span>
+        <span class="tag">#Erzurumİnşaat</span>
+        <span class="tag">#2026Maliyet</span>
+        <span class="tag">#EvMaliyeti</span>
+        <span class="tag">#BetonMaliyeti</span>
+        <span class="tag">#İnşaatHesabı</span>
+        <span class="tag">#MEKAİnşaat</span>
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-logo"><span>ME-KA</span> İNŞAAT</div><p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı.</p></div>
+        <div><h4 class="footer-title">Hızlı Linkler</h4><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="projeler.html">Projeler</a></li><li><a href="blog.html">Blog</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+        <div><h4 class="footer-title">Hizmetlerimiz</h4><ul class="footer-links"><li><a href="hizmetler/yikim.html">Yıkım</a></li><li><a href="hizmetler/hafriyat.html">Hafriyat</a></li><li><a href="hizmetler/agrega.html">Agrega</a></li><li><a href="hizmetler/beton.html">Beton</a></li></ul></div>
+        <div><h4 class="footer-title">İletişim</h4><div class="footer-contact"><p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p><p>📞 <a href="tel:+905384865840">0538 486 58 40</a></p></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 ME-KA İnşaat. Tüm hakları saklıdır.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/905384865840?text=Merhaba%2C%20Erzurum%20in%C5%9Faat%20maliyeti%20hesab%C4%B1%20ve%20fiyat%20teklifi%20almak%20istiyorum." class="whatsapp-float" target="_blank"><svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+  <div class="sticky-contact"><div class="container"><a href="tel:+905384865840">📞 Hemen Ara</a><a href="https://wa.me/905384865840">💬 WhatsApp</a><a href="teklif-al.html" class="btn-primary">Teklif Al</a></div></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

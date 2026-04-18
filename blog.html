@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | İnşaat, Beton, Hafriyat Rehberi | ME-KA İnşaat Erzurum</title>
+  <meta name="description" content="Erzurum'da inşaat, beton, agrega, hafriyat ve altyapı hakkında uzman görüşleri, teknik rehberler ve güncel fiyat analizleri.">
+  <meta name="keywords" content="erzurum beton rehberi, agrega nedir, hafriyat teknikleri, c35 beton özellikleri, inşaat maliyeti hesaplama">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="hizmetler/1.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hizmetler/1.jpg') center/cover;
+      padding: 4rem 0;
+      text-align: center;
+      color: white;
+    }
+    .blog-hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .blog-hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1rem;
+      margin: 2rem 0;
+    }
+    .filter-btn {
+      background: white;
+      border: 1px solid #E5E7EB;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #F59E0B;
+      border-color: #F59E0B;
+      color: #1F2937;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+      border: 1px solid #F3F4F6;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,0.1);
+    }
+    .blog-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .blog-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-category {
+      display: inline-block;
+      background: #FDE68A;
+      color: #1F2937;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.8rem;
+      align-self: flex-start;
+    }
+    .blog-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+      color: #1F2937;
+    }
+    .blog-excerpt {
+      color: #4B5563;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.75rem 0 1.5rem;
+    }
+    .tag {
+      background: #F9FAFB;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: #4B5563;
+    }
+    .read-more {
+      margin-top: auto;
+      color: #F59E0B;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .read-more:hover { gap: 0.6rem; }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 3rem 0;
+    }
+    .page-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid #E5E7EB;
+      color: #1F2937;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .page-link.active, .page-link:hover {
+      background: #F59E0B;
+      border-color: #F59E0B;
+    }
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-container">
+    <a href="index.html" class="logo"><span>ME-KA</span> İNŞAAT</a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Hizmetler ▼</button>
+        <div class="dropdown-menu">
+          <a href="hizmetler/yikim.html">Yıkım</a>
+          <a href="hizmetler/hafriyat.html">Hafriyat</a>
+          <a href="hizmetler/agrega.html">Agrega</a>
+          <a href="hizmetler/beton.html">Beton</a>
+        </div>
+      </div>
+      <a href="projeler.html" class="nav-link">Projeler</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="kariyer.html" class="nav-link">Kariyer</a>
+      <a href="iletisim.html" class="nav-link">İletişim</a>
+    </nav>
+    <a href="https://wa.me/905384865840" class="whatsapp-btn" target="_blank">📱 WhatsApp</a>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a>
+    <div class="dropdown"><button class="dropdown-toggle">Hizmetler ▼</button><div class="dropdown-menu"><a href="hizmetler/yikim.html">Yıkım</a><a href="hizmetler/hafriyat.html">Hafriyat</a><a href="hizmetler/agrega.html">Agrega</a><a href="hizmetler/beton.html">Beton</a></div></div>
+    <a href="projeler.html">Projeler</a><a href="blog.html">Blog</a><a href="kariyer.html">Kariyer</a><a href="iletisim.html">İletişim</a>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <h1>📘 İnşaat & Beton Rehberi</h1>
+    <p>Erzurum'da inşaat, hafriyat, agrega ve beton hakkında bilimsel rehberler, uzman ipuçları ve güncel analizler.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="category-filters">
+      <button class="filter-btn active" data-filter="all">Tümü</button>
+      <button class="filter-btn" data-filter="agrega">🪨 Agrega</button>
+      <button class="filter-btn" data-filter="hafriyat">🚜 Hafriyat</button>
+      <button class="filter-btn" data-filter="erzurum">❄️ Erzurum Özel</button>
+      <button class="filter-btn" data-filter="beton">🏭 Beton</button>
+      <button class="filter-btn" data-filter="satis">💰 Satış Rehberi</button>
+    </div>
+
+    <div id="blogContainer" class="blog-grid"></div>
+    <div id="pagination" class="pagination"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><span>ME-KA</span> İNŞAAT</div><p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı.</p></div>
+      <div><h4 class="footer-title">Hızlı Linkler</h4><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="projeler.html">Projeler</a></li><li><a href="blog.html">Blog</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h4 class="footer-title">Hizmetlerimiz</h4><ul class="footer-links"><li><a href="hizmetler/yikim.html">Yıkım</a></li><li><a href="hizmetler/hafriyat.html">Hafriyat</a></li><li><a href="hizmetler/agrega.html">Agrega</a></li><li><a href="hizmetler/beton.html">Beton</a></li></ul></div>
+      <div><h4 class="footer-title">İletişim</h4><div class="footer-contact"><p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p><p>📞 <a href="tel:+905384865840">0538 486 58 40</a></p></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 ME-KA İnşaat.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905384865840" class="whatsapp-float" target="_blank"><svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+<div class="sticky-contact"><div class="container"><a href="tel:+905384865840">📞 Hemen Ara</a><a href="https://wa.me/905384865840">💬 WhatsApp</a><a href="teklif-al.html" class="btn-primary">Teklif Al</a></div></div>
+
+<script src="js/main.js"></script>
+<script>
+// ========== BLOG VERİTABANI (DOĞRU DOSYA ADLARIYLA) ==========
+const blogPosts = [
+  // AGREGA (9)
+  { id:1, title:"Agrega Nedir? Türleri Nelerdir?", category:"agrega", excerpt:"Agrega, betonun hacimce %60-80'ini oluşturan kum, çakıl, kırmataş gibi mineral kökenli granüler malzemelerdir. Doğal agrega ve yapay agrega olarak iki ana gruba ayrılır.", tags:["agrega nedir","beton agregası","kırmataş"], img:"1", url:"agrega-nedir.html" },
+  { id:2, title:"Kum Çeşitleri Nelerdir? (İnce – Kalın Kum)", category:"agrega", excerpt:"Kum, 0-4 mm arası ince agregadır. İnce kum (0-1 mm) sıva ve şap için, orta kum (1-2 mm) beton üretimi için idealdir.", tags:["kum çeşitleri","ince kum","kalın kum"], img:"2", url:"kum-cesitleri.html" },
+  { id:3, title:"Mıcır Nedir? Nerelerde Kullanılır?", category:"agrega", excerpt:"Mıcır, taş ocaklarından kırılarak elde edilen 4-32 mm arası iri agregadır. 1 numara mıcır beton agregası, 2 numara mıcır dolgu ve drenajda kullanılır.", tags:["mıcır nedir","mıcır çeşitleri","1 numara mıcır"], img:"3", url:"micir-nedir.html" },
+  { id:4, title:"Beton İçin Hangi Kum Kullanılır?", category:"agrega", excerpt:"Beton üretiminde en ideal kum, temiz ve iyi gradasyonlu 0-4 mm doğal kum veya kırma kumdur. İnce madde oranı %3'ü geçmemelidir.", tags:["beton kumu","doğru kum seçimi","agrega gradasyonu"], img:"4", url:"beton-icin-kum.html" },
+  { id:5, title:"Dolgu Malzemesi Nedir?", category:"agrega", excerpt:"Dolgu malzemesi, zemin iyileştirme, yol altyapısı ve tesviye işlerinde kullanılan granüler malzemelerdir. Stabilize dolgu, kaya dolgu olarak sınıflandırılır.", tags:["dolgu malzemesi","stabilize","zemin iyileştirme"], img:"5", url:"dolgu-malzemesi.html" },
+  { id:6, title:"Stabilize Malzeme Nedir?", category:"agrega", excerpt:"Stabilize, belirli gradasyonda kum ve çakıl karışımının su ile sıkıştırılmasıyla elde edilen bir dolgu türüdür. Yol temel tabakasında kullanılır.", tags:["stabilize","yol altyapısı","sıkıştırılmış dolgu"], img:"6", url:"stabilize-malzeme.html" },
+  { id:7, title:"1 Ton Kum Fiyatı Erzurum 2026", category:"agrega", excerpt:"Erzurum'da 1 ton kum fiyatı, kumun cinsine (doğal/kırma), nakliye mesafesine ve sipariş miktarına göre değişkenlik gösterir.", tags:["kum fiyatları","erzurum kum","2026 fiyat"], img:"7", url:"kum-fiyati-erzurum.html" },
+  { id:8, title:"Mıcır Fiyatları Erzurum 2026", category:"agrega", excerpt:"Mıcır fiyatları, mıcırın boyutuna (1,2,3 numara), çekileceği ocağa ve nakliye mesafesine bağlı olarak hesaplanır.", tags:["mıcır fiyatları","erzurum mıcır","2026"], img:"8", url:"micir-fiyatlari-erzurum.html" },
+  { id:9, title:"Agrega Nasıl Seçilir?", category:"agrega", excerpt:"Doğru agrega seçimi, beton dayanımı ve işlenebilirliği için kritiktir. Tane boyutu dağılımı, su emme oranı, dona dayanıklılık değerlendirilmelidir.", tags:["agrega seçimi","beton agregası","kaliteli agrega"], img:"9", url:"agrega-secimi.html" },
+  // HAFRİYAT (7)
+  { id:10, title:"Hafriyat Nedir? Nasıl Yapılır?", category:"hafriyat", excerpt:"Hafriyat, toprak veya kaya zeminin kazılarak çıkarılması, taşınması ve dolgu olarak kullanılması işlemidir. Temel kazısı, yol altyapısı başlıca işlerdir.", tags:["hafriyat nedir","kazı işleri","temel kazısı"], img:"10", url:"hafriyat-nedir.html" },
+  { id:11, title:"Kepçe Kiralama Fiyatları Erzurum 2026", category:"hafriyat", excerpt:"Kepçe (ekskavatör) kiralama fiyatları, makinenin tonajına, çalışma saatine ve operatör dahil olup olmamasına göre değişir.", tags:["kepçe kiralama","erzurum kepçe","ekskavatör fiyat"], img:"11", url:"kepce-kiralama.html" },
+  { id:12, title:"Ekskavatör Nedir? Ne İşe Yarar?", category:"hafriyat", excerpt:"Ekskavatör (kepçe), hidrolik sistemle çalışan ağır iş makinesidir. Kazı, yükleme, yıkım ve malzeme taşıma işlerinde kullanılır.", tags:["ekskavatör","kepçe","iş makinesi"], img:"12", url:"ekskavator-nedir.html" },
+  { id:13, title:"Temel Kazısı Nasıl Yapılır?", category:"hafriyat", excerpt:"Temel kazısı, yapının oturacağı zeminin proje kotuna göre kazılmasıdır. Aplikasyon, kazı, şev güvenliği aşamalarını içerir.", tags:["temel kazısı","inşaat kazısı","zemin hazırlığı"], img:"13", url:"temel-kazisi.html" },
+  { id:14, title:"Hafriyat Kamyonu Kiralama", category:"hafriyat", excerpt:"Hafriyat kamyonu (damperli kamyon), kazılan malzemenin taşınması için kullanılır. 25-30 ton kapasiteli kamyonlarımızla hizmet veriyoruz.", tags:["hafriyat kamyonu","kamyon kiralama","nakliye"], img:"1", url:"hafriyat-kamyonu.html" },
+  { id:15, title:"Moloz Taşıma Nasıl Yapılır?", category:"hafriyat", excerpt:"Moloz (inşaat atığı), belediye tarafından belirlenen hafriyat döküm sahalarına taşınmalıdır. Yasal döküm zorunludur.", tags:["moloz taşıma","inşaat atığı","hafriyat döküm"], img:"2", url:"moloz-tasima.html" },
+  { id:16, title:"Zemin Düzeltme (Tesviye) Nasıl Yapılır?", category:"hafriyat", excerpt:"Zemin düzeltme, arazinin istenilen kotta düzleştirilmesi işlemidir. Greyder, loder ve ekskavatör kullanılarak yapılır.", tags:["zemin düzeltme","tesviye","arazi hazırlığı"], img:"3", url:"zemin-duzeltme.html" },
+  // ERZURUM ÖZEL (4)
+  { id:17, title:"Kış Şartlarında Beton Dökümü", category:"erzurum", excerpt:"Soğuk havada beton dökümü, don riskine karşı özel önlemler gerektirir. Antifriz katkılar kullanılmalı ve döküm sonrası ısı yalıtımı yapılmalıdır.", tags:["kışın beton","soğuk hava betonu","antifriz beton"], img:"4", url:"kis-beton-dokumu.html" },
+  { id:18, title:"Erzurum'da İnşaat Sezonu Ne Zaman Başlar?", category:"erzurum", excerpt:"Erzurum'da inşaat sezonu genellikle Nisan ayı ortasında başlar, Ekim sonuna kadar devam eder. Kış aylarında hafriyat ve beton işleri sınırlıdır.", tags:["erzurum inşaat sezonu","inşaat mevsimi","çalışma takvimi"], img:"5", url:"insaat-sezonu.html" },
+  { id:19, title:"Don Olayına Karşı Beton Önlemleri", category:"erzurum", excerpt:"Don olayı, beton prizini tamamlamadan oluşursa dayanım kaybına yol açar. Hava sürükleyici katkı ve düşük su/çimento oranı şarttır.", tags:["don olayı","beton koruma","soğuk iklim betonu"], img:"6", url:"don-olayi-beton.html" },
+  { id:20, title:"Erzurum'da En Dayanıklı Beton Hangisi?", category:"erzurum", excerpt:"Erzurum'un sert kış şartlarında dona dayanıklı, hava sürükleyici katkılı C30/37 ve üzeri beton sınıfları tavsiye edilir.", tags:["dayanıklı beton","erzurum beton","don direnci"], img:"7", url:"en-dayanikli-beton.html" },
+  // BETON (13)
+  { id:21, title:"C20 Beton Nedir? Nerelerde Kullanılır?", category:"beton", excerpt:"C20 beton, 20 MPa dayanımlı ekonomik beton sınıfıdır. Grobeton, saha betonu ve hafif yapılarda kullanılır.", tags:["C20 beton","grobeton","ekonomik beton"], img:"8", url:"c20-beton.html" },
+  { id:22, title:"C25 Beton Nedir? Nerelerde Kullanılır?", category:"beton", excerpt:"C25 beton, 25 MPa dayanıma sahip, konut inşaatlarında yaygın kullanılan beton sınıfıdır. Kolon, kiriş, döşemelerde tercih edilir.", tags:["C25 beton","beton sınıfı","konut betonu"], img:"9", url:"c25-beton.html" },
+  { id:23, title:"C30 Beton Nedir? Erzurum'da Neden Tercih Edilir?", category:"beton", excerpt:"C30 beton, 30 MPa dayanıma sahip, yüksek katlı yapılar ve deprem bölgeleri için ideal beton sınıfıdır.", tags:["C30 beton","yüksek dayanım","erzurum C30"], img:"10", url:"c30-beton.html" },
+  { id:24, title:"C35 Beton Özellikleri ve Kullanım Alanları", category:"beton", excerpt:"C35 beton, 35 MPa basınç dayanımına sahip, endüstriyel zeminler ve özel projelerde kullanılan yüksek performanslı betondur.", tags:["C35 beton","yüksek mukavemet","endüstriyel beton"], img:"11", url:"c35-beton.html" },
+  { id:25, title:"Hazır Beton Nedir? Avantajları Nelerdir?", category:"beton", excerpt:"Hazır beton, bilgisayar kontrollü santrallerde üretilip transmikserlerle şantiyeye sevk edilen betondur. Homojen karışım ve kalite kontrolü sağlar.", tags:["hazır beton","beton santrali","transmikser"], img:"12", url:"hazir-beton.html" },
+  { id:26, title:"Beton Türleri Nelerdir? (Kapsamlı Rehber)", category:"beton", excerpt:"Betonlar; normal dayanımlı, yüksek dayanımlı, hafif beton, ağır beton, lifli beton gibi birçok sınıfa ayrılır.", tags:["beton türleri","özel betonlar","beton sınıfları"], img:"13", url:"beton-turleri.html" },
+  { id:27, title:"Beton Metreküp Fiyatı Nasıl Hesaplanır?", category:"beton", excerpt:"Beton fiyatı, beton sınıfı, katkı maddeleri, sipariş miktarı ve pompa kullanımına göre hesaplanır.", tags:["beton fiyat","m3 fiyat","beton hesaplama"], img:"1", url:"beton-fiyat-hesaplama.html" },
+  { id:28, title:"Erzurum'da Beton Fiyatları 2026", category:"beton", excerpt:"Erzurum'da beton fiyatları, santralin konumu, nakliye mesafesi ve beton sınıfına göre değişir. Toplu alımlarda özel indirimler sunuyoruz.", tags:["erzurum beton fiyat","2026 beton","C25 fiyat"], img:"2", url:"erzurum-beton-fiyatlari.html" },
+  { id:29, title:"Beton Dayanım Sınıfları Nedir?", category:"beton", excerpt:"Beton dayanım sınıfı, 28 günlük karakteristik silindir basınç dayanımını (MPa) ifade eder. C20/25'ten C50/60'a kadar sınıflar mevcuttur.", tags:["beton sınıfı","basınç dayanımı","C25 C30"], img:"3", url:"beton-dayanim-siniflari.html" },
+  { id:30, title:"Beton Kalitesi Nasıl Anlaşılır?", category:"beton", excerpt:"Beton kalitesi; slump testi, basınç dayanım testi, ultrases geçiş hızı ve karot numunesi ile kontrol edilir.", tags:["beton kalitesi","beton testi","kalite kontrol"], img:"4", url:"beton-kalitesi.html" },
+  { id:31, title:"Beton Neden Çatlar?", category:"beton", excerpt:"Beton çatlakları; rötre, aşırı yükleme, donma-çözülme, hızlı kuruma ve yanlış kürlemeden kaynaklanır.", tags:["beton çatlağı","rötre","beton kusurları"], img:"5", url:"beton-catlak.html" },
+  { id:32, title:"Beton Katkı Maddeleri Nelerdir?", category:"beton", excerpt:"Beton katkıları; akışkanlaştırıcı, priz geciktirici, priz hızlandırıcı, hava sürükleyici, antifriz ve su geçirimsizlik katkılarıdır.", tags:["beton katkı","kimyasal katkı","antifriz"], img:"6", url:"beton-katki-maddeleri.html" },
+  { id:33, title:"Betonun Ömrü Ne Kadardır?", category:"beton", excerpt:"Doğru tasarlanmış ve uygulanmış bir beton yapının ömrü 50-100 yıl arasındadır. Bakım ve çevresel koşullar ömrü etkiler.", tags:["beton ömrü","dayanıklılık","yapı ömrü"], img:"7", url:"beton-omru.html" },
+  // SATIŞ REHBERİ (5)
+  { id:34, title:"Erzurum Beton Firması Seçerken Nelere Dikkat Edilmeli?", category:"satis", excerpt:"Firmanın kalite belgeleri, santralin konumu, filo kapasitesi, teknik destek imkanı ve müşteri yorumları değerlendirilmelidir.", tags:["beton firması","firma seçimi","güvenilir beton"], img:"8", url:"beton-firmasi-secimi.html" },
+  { id:35, title:"Hazır Beton Siparişi Nasıl Verilir?", category:"satis", excerpt:"Beton siparişi verirken beton sınıfı, miktar (m³), döküm adresi, istenen kıvam ve varsa katkı talepleri belirtilmelidir.", tags:["beton siparişi","hazır beton","sipariş rehberi"], img:"9", url:"hazir-beton-siparisi.html" },
+  { id:36, title:"Beton Dökümü Öncesi Bilinmesi Gerekenler", category:"satis", excerpt:"Kalıp kontrolü, donatı yerleşimi, vibratör hazırlığı ve hava durumu takibi beton dökümü öncesi yapılması gerekenlerdir.", tags:["beton dökümü","döküm öncesi","hazırlık"], img:"10", url:"beton-dokumu-oncesi.html" },
+  { id:37, title:"100 m² Ev İçin Ne Kadar Beton Gider?", category:"satis", excerpt:"100 m² oturumlu bir evin radye temelinde yaklaşık 30-40 m³, kat döşemesinde ise 10-15 m³ beton kullanılır.", tags:["beton hesabı","m3 hesaplama","ev beton ihtiyacı"], img:"11", url:"100-m2-beton.html" },
+  { id:38, title:"İnşaat Maliyeti Hesaplama (Erzurum Özel)", category:"satis", excerpt:"İnşaat maliyeti; arsa bedeli, malzeme, işçilik, ruhsat harçları ve nakliye giderlerinden oluşur.", tags:["inşaat maliyeti","maliyet hesabı","erzurum inşaat"], img:"12", url:"insaat-maliyeti.html" }
+];
+
+const POSTS_PER_PAGE = 9;
+let currentPage = 1;
+let currentCategory = 'all';
+
+function renderPosts() {
+  let filtered = currentCategory === 'all' ? blogPosts : blogPosts.filter(p => p.category === currentCategory);
+  const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const paginated = filtered.slice(start, start + POSTS_PER_PAGE);
+  
+  const container = document.getElementById('blogContainer');
+  container.innerHTML = paginated.map(post => `
+    <div class="blog-card">
+      <img src="hizmetler/${post.img}.jpg" alt="${post.title}" class="blog-img" onerror="this.src='https://via.placeholder.com/400x200/374151/F59E0B?text=ME-KA+Blog'">
+      <div class="blog-content">
+        <span class="blog-category">${post.category}</span>
+        <h3 class="blog-title">${post.title}</h3>
+        <p class="blog-excerpt">${post.excerpt}</p>
+        <div class="blog-tags">${post.tags.map(t => `<span class="tag">#${t}</span>`).join('')}</div>
+        <a href="${post.url}" class="read-more">Detaylı Gör →</a>
+      </div>
+    </div>
+  `).join('');
+  
+  renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+  const pagination = document.getElementById('pagination');
+  let html = '';
+  for (let i = 1; i <= totalPages; i++) {
+    html += `<a href="#" class="page-link ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</a>`;
+  }
+  pagination.innerHTML = html;
+  document.querySelectorAll('.page-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentPage = parseInt(link.dataset.page);
+      renderPosts();
+      window.scrollTo({ top: 400, behavior: 'smooth' });
+    });
+  });
+}
+
+// Filtreleme
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.dataset.filter;
+    currentPage = 1;
+    renderPosts();
+  });
+});
+
+// Mobil menü
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+  document.querySelector('.mobile-menu').classList.toggle('active');
+});
+
+// İlk yükleme
+renderPosts();
+</script>
+</body>
+</html>

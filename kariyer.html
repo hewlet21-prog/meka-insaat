@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ME-KA İnşaat Kariyer | Erzurum İş Başvurusu</title>
+  <meta name="description" content="ME-KA İnşaat iş başvurusu yapın. Erzurum'da aşçı, şoför, mühendis ve işçi alımları için hemen başvurun.">
+  <meta name="keywords" content="erzurum iş ilanı, inşaat iş başvurusu, erzurum işçi alımı, şoför iş ilanı erzurum, meka inşaat kariyer">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="ME-KA İnşaat Kariyer | Erzurum İş Başvurusu">
+  <meta property="og:description" content="Erzurum'da büyüyen projelerimizde yer almak için ekibimize katılın.">
+  <meta property="og:image" content="hizmetler/1.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="hizmetler/1.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .career-hero {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('hizmetler/1.jpg') center/cover no-repeat;
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+    }
+    .career-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; }
+    .career-hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; opacity: 0.95; }
+    
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .why-card {
+      background: white;
+      padding: 1.5rem 1rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--primary);
+      transition: transform 0.2s;
+    }
+    .why-card:hover { transform: translateY(-4px); }
+    .why-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .why-card h4 { font-weight: 700; margin-bottom: 0.5rem; color: var(--dark-heavy); }
+    .why-card p { font-size: 0.85rem; color: var(--gray-600); }
+    
+    .positions-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      margin: 3rem 0;
+      border: 1px solid var(--primary-light);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+    .position-selector {
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+    .position-selector select {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--primary-light);
+      border-radius: 50px;
+      font-size: 1rem;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .position-selector select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+    }
+    .position-detail {
+      background: var(--gray-50);
+      padding: 2rem;
+      border-radius: 20px;
+      border-left: 4px solid var(--primary);
+    }
+    .position-detail h3 { color: var(--dark-heavy); margin-bottom: 1rem; }
+    .position-detail ul { list-style: none; padding: 0; }
+    .position-detail li { padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.75rem; color: var(--gray-700); }
+    .position-detail li::before { content: "▹"; color: var(--primary); font-weight: bold; font-size: 1.2rem; }
+    
+    .form-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px -8px rgba(0,0,0,0.1);
+      border: 1px solid var(--primary-light);
+    }
+    .form-section { margin-bottom: 2rem; }
+    .form-section h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--dark-heavy);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .form-group { margin-bottom: 1rem; }
+    .form-group.full-width { grid-column: span 2; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--dark-heavy);
+      font-size: 0.9rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      background: white;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.1);
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    
+    .file-upload {
+      border: 2px dashed var(--primary-light);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      background: var(--gray-50);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .file-upload:hover { border-color: var(--primary); background: white; }
+    .file-upload input { display: none; }
+    .file-upload-label { cursor: pointer; }
+    
+    .submit-btn {
+      background: var(--primary);
+      color: var(--dark-heavy);
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.02);
+    }
+    
+    /* YENİ İLETİŞİM BARI - TURUNCU ÇERÇEVELİ KARTLAR */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .contact-card {
+      background: white;
+      padding: 1.5rem 1rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 2px solid var(--primary);
+      box-shadow: 0 8px 20px rgba(245,158,11,0.1);
+      transition: all 0.2s;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(245,158,11,0.15);
+    }
+    .contact-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .contact-card h4 {
+      font-weight: 700;
+      color: var(--dark-heavy);
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .contact-card p, .contact-card a {
+      color: var(--gray-700);
+      font-size: 0.9rem;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .contact-card a:hover { color: var(--primary-dark); }
+    
+    .success-message {
+      background: #10B981;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+    
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .career-hero h1 { font-size: 2.5rem; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full-width { grid-column: span 1; }
+    }
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo"><span>ME-KA</span> İNŞAAT</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Hizmetler ▼</button>
+          <div class="dropdown-menu">
+            <a href="hizmetler/yikim.html">Yıkım</a>
+            <a href="hizmetler/hafriyat.html">Hafriyat</a>
+            <a href="hizmetler/agrega.html">Agrega</a>
+            <a href="hizmetler/beton.html">Beton</a>
+          </div>
+        </div>
+        <a href="projeler.html" class="nav-link">Projeler</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="kariyer.html" class="nav-link">Kariyer</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+      </nav>
+      <a href="https://wa.me/905384865840" class="whatsapp-btn" target="_blank">📱 WhatsApp</a>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Hizmetler ▼</button>
+        <div class="dropdown-menu">
+          <a href="hizmetler/yikim.html">Yıkım</a>
+          <a href="hizmetler/hafriyat.html">Hafriyat</a>
+          <a href="hizmetler/agrega.html">Agrega</a>
+          <a href="hizmetler/beton.html">Beton</a>
+        </div>
+      </div>
+      <a href="projeler.html">Projeler</a>
+      <a href="blog.html">Blog</a>
+      <a href="kariyer.html">Kariyer</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="career-hero">
+    <div class="container">
+      <h1>ME-KA İnşaat ile Geleceğini İnşa Et</h1>
+      <p>Erzurum'da büyüyen projelerimizde yer almak için ekibimize katılın</p>
+      <a href="#basvuru-formu" class="btn btn-primary">Hemen Başvur</a>
+    </div>
+  </section>
+
+  <!-- NEDEN BİZ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Neden ME-KA İnşaat?</h2>
+      <div class="why-grid">
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">🛡️</div>
+          <h4>Güvenilir Firma</h4>
+          <p>40 yıllık sektör tecrübesiyle Erzurum'un lider inşaat firması</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">💼</div>
+          <h4>Sürekli İş İmkanı</h4>
+          <p>Devam eden büyük projelerle istikrarlı çalışma ortamı</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">👷</div>
+          <h4>Profesyonel Ekip</h4>
+          <p>Alanında uzman 50+ personel ile birlikte çalışma fırsatı</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">📈</div>
+          <h4>Kariyer Gelişimi</h4>
+          <p>Kendini geliştirebileceğin eğitim ve yükselme imkanları</p>
+        </div>
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">🏗️</div>
+          <h4>Büyük Projeler</h4>
+          <p>Erzurum'un en prestijli inşaat ve altyapı projelerinde görev alma</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AÇIK POZİSYONLAR -->
+  <section class="section bg-gray-50">
+    <div class="container">
+      <h2 class="section-title">Açık Pozisyonlar</h2>
+      <div class="positions-section animate-on-scroll">
+        <div class="position-selector">
+          <select id="positionSelect">
+            <option value="asci">👨‍🍳 Aşçı</option>
+            <option value="sofor">🚛 Şoför</option>
+            <option value="muhendis">📐 İnşaat Mühendisi</option>
+            <option value="operator">🚜 Makine Operatörü</option>
+            <option value="hafriyat">⛏️ Hafriyat Operatörü</option>
+            <option value="genel">🔧 Genel İşçi</option>
+            <option value="form">👔 Formen / Usta Başı</option>
+            <option value="teknik">📋 Teknik Personel</option>
+          </select>
+        </div>
+        <div class="position-detail" id="positionDetail">
+          <h3 id="positionTitle">Aşçı</h3>
+          <div id="positionDesc">
+            <ul>
+              <li>Şantiye yemekhanesinde günlük yemek hazırlama</li>
+              <li>Malzeme takibi ve mutfak düzeni</li>
+              <li>Tercihen hijyen sertifikalı</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAŞVURU FORMU -->
+  <section class="section" id="basvuru-formu">
+    <div class="container">
+      <div class="form-container animate-on-scroll">
+        <h2 class="section-title" style="text-align: left; margin-top: 0;">İş Başvuru Formu</h2>
+        
+        <div class="success-message" id="successMessage">
+          ✅ Başvurunuz başarıyla alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.
+        </div>
+        
+        <form id="careerForm" action="https://formspree.io/f/ubeyd.atalay@me-kainsaat.com" method="POST" enctype="multipart/form-data">
+          
+          <!-- Kişisel Bilgiler -->
+          <div class="form-section">
+            <h3>👤 Kişisel Bilgiler</h3>
+            <div class="form-grid">
+              <div class="form-group"><label>Ad Soyad *</label><input type="text" name="adsoyad" required></div>
+              <div class="form-group"><label>TC Kimlik No *</label><input type="text" name="tc" required pattern="[0-9]{11}" maxlength="11"></div>
+              <div class="form-group"><label>Doğum Tarihi *</label><input type="date" name="dogum" required></div>
+              <div class="form-group"><label>Telefon *</label><input type="tel" name="telefon" required></div>
+              <div class="form-group full-width"><label>E-posta</label><input type="email" name="email"></div>
+              <div class="form-group full-width"><label>Adres</label><textarea name="adres" rows="2"></textarea></div>
+            </div>
+          </div>
+          
+          <!-- Pozisyon -->
+          <div class="form-section">
+            <h3>📋 Başvurulan Pozisyon</h3>
+            <div class="form-grid"><div class="form-group"><label>Pozisyon *</label><select name="pozisyon" id="formPosition" required><option value="">Seçiniz</option><option>Aşçı</option><option>Şoför</option><option>İnşaat Mühendisi</option><option>Makine Operatörü</option><option>Hafriyat Operatörü</option><option>Genel İşçi</option><option>Formen / Usta Başı</option><option>Teknik Personel</option></select></div></div>
+          </div>
+          
+          <!-- Eğitim -->
+          <div class="form-section">
+            <h3>🎓 Eğitim</h3>
+            <div class="form-grid">
+              <div class="form-group"><label>Eğitim Durumu *</label><select name="egitim" required><option value="">Seçiniz</option><option>İlkokul</option><option>Ortaokul</option><option>Lise</option><option>Ön Lisans</option><option>Lisans</option></select></div>
+              <div class="form-group"><label>Bölüm</label><input type="text" name="bolum"></div>
+              <div class="form-group"><label>Mezuniyet Yılı</label><input type="text" name="mezuniyet" placeholder="Örn: 2015"></div>
+            </div>
+          </div>
+          
+          <!-- Deneyim -->
+          <div class="form-section">
+            <h3>💼 Deneyim</h3>
+            <div class="form-grid">
+              <div class="form-group full-width"><label>Daha önce çalıştığınız yerler</label><textarea name="deneyim" rows="2"></textarea></div>
+              <div class="form-group"><label>Toplam Deneyim (Yıl)</label><input type="text" name="toplam_deneyim"></div>
+              <div class="form-group full-width"><label>Referanslar</label><textarea name="referans" rows="2"></textarea></div>
+            </div>
+          </div>
+          
+          <!-- Yetenekler -->
+          <div class="form-section">
+            <h3>🔧 Yetenekler</h3>
+            <div class="form-grid">
+              <div class="form-group"><label>Ehliyet var mı?</label><select name="ehliyet_var"><option>Hayır</option><option>Evet</option></select></div>
+              <div class="form-group"><label>Ehliyet Sınıfı</label><input type="text" name="ehliyet_sinif" placeholder="Örn: B, C, E"></div>
+              <div class="form-group"><label>Operatör Belgesi var mı?</label><select name="operator_belge"><option>Hayır</option><option>Evet</option></select></div>
+              <div class="form-group full-width"><label>Sertifikalar</label><textarea name="sertifikalar" rows="2"></textarea></div>
+            </div>
+          </div>
+          
+          <!-- Ek Bilgiler -->
+          <div class="form-section">
+            <h3>📝 Ek Bilgiler</h3>
+            <div class="form-grid">
+              <div class="form-group"><label>Askerlik Durumu</label><select name="askerlik"><option>Yapıldı</option><option>Tecilli</option><option>Muaf</option></select></div>
+              <div class="form-group"><label>Sağlık Durumu</label><input type="text" name="saglik"></div>
+              <div class="form-group"><label>Sigara kullanımı</label><select name="sigara"><option>Hayır</option><option>Evet</option></select></div>
+              <div class="form-group"><label>Vardiyalı çalışabilir mi?</label><select name="vardiya"><option>Evet</option><option>Hayır</option></select></div>
+            </div>
+          </div>
+          
+          <!-- CV Yükleme -->
+          <div class="form-section">
+            <h3>📎 CV Yükleme</h3>
+            <div class="file-upload" onclick="document.getElementById('cvInput').click()">
+              <input type="file" id="cvInput" name="cv" accept=".pdf,.doc,.docx">
+              <div class="file-upload-label">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📄</div>
+                <p style="color: var(--gray-600);">CV'nizi sürükleyin veya seçmek için tıklayın</p>
+                <p style="font-size: 0.8rem; color: var(--gray-500); margin-top: 0.5rem;">PDF, DOC, DOCX (Max 5MB)</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mesaj -->
+          <div class="form-section">
+            <h3>💬 Kendinizi Kısaca Tanıtın</h3>
+            <div class="form-group"><textarea name="mesaj" rows="4" placeholder="Neden ME-KA İnşaat'ta çalışmak istiyorsunuz?"></textarea></div>
+          </div>
+          
+          <button type="submit" class="submit-btn">📤 Başvuruyu Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM BİLGİLERİ (TURUNCU ÇERÇEVELİ KARTLAR) -->
+  <section class="section bg-gray-50">
+    <div class="container">
+      <h2 class="section-title">Bize Ulaşın</h2>
+      <div class="contact-grid">
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">📍</div>
+          <h4>Adres</h4>
+          <p>Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye / Erzurum</p>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">📞</div>
+          <h4>Telefon</h4>
+          <a href="tel:+905384865840">0538 486 58 40</a>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">💬</div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/905384865840" target="_blank">WhatsApp'tan Yaz</a>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">✉️</div>
+          <h4>E-posta</h4>
+          <a href="mailto:ubeyd.atalay@me-kainsaat.com">ubeyd.atalay@me-kainsaat.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ekibimize Katılmak İçin Hemen Başvurun</h2>
+      <p style="font-size: 1.25rem; margin-bottom: 2rem;">Siz de ME-KA ailesinin bir parçası olun</p>
+      <a href="#basvuru-formu" class="btn btn-primary">Başvur</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-logo"><span>ME-KA</span> İNŞAAT</div><p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı.</p></div>
+        <div><h4 class="footer-title">Hızlı Linkler</h4><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="projeler.html">Projeler</a></li><li><a href="blog.html">Blog</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+        <div><h4 class="footer-title">Hizmetlerimiz</h4><ul class="footer-links"><li><a href="hizmetler/yikim.html">Yıkım</a></li><li><a href="hizmetler/hafriyat.html">Hafriyat</a></li><li><a href="hizmetler/agrega.html">Agrega</a></li><li><a href="hizmetler/beton.html">Beton</a></li></ul></div>
+        <div><h4 class="footer-title">İletişim</h4><div class="footer-contact"><p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p><p>📞 <a href="tel:+905384865840">0538 486 58 40</a></p></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 ME-KA İnşaat. Tüm hakları saklıdır.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/905384865840" class="whatsapp-float" target="_blank">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+
+  <div class="sticky-contact">
+    <div class="container">
+      <a href="tel:+905384865840">📞 Hemen Ara</a>
+      <a href="https://wa.me/905384865840" target="_blank">💬 WhatsApp</a>
+      <a href="#basvuru-formu" class="btn-primary">Başvur</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Scroll animasyonu
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    
+    // Pozisyon seçimi
+    const positionData = {
+      asci: { title: 'Aşçı', desc: `<ul><li>Şantiye yemekhanesinde günlük yemek hazırlama</li><li>Malzeme takibi ve mutfak düzeni</li><li>Tercihen hijyen sertifikalı</li><li>En az 2 yıl deneyim</li></ul>` },
+      sofor: { title: 'Şoför', desc: `<ul><li>Hafriyat kamyonu ve beton mikseri kullanımı</li><li>E sınıfı ehliyet zorunlu</li><li>SRC belgesi tercih sebebi</li><li>En az 5 yıl deneyim</li></ul>` },
+      muhendis: { title: 'İnşaat Mühendisi', desc: `<ul><li>İnşaat Mühendisliği lisans mezunu</li><li>AutoCAD, SAP2000 bilgisi</li><li>Şantiye yönetimi deneyimi</li><li>Tercihen 3+ yıl tecrübe</li></ul>` },
+      operator: { title: 'Makine Operatörü', desc: `<ul><li>Ekskavatör, loder, greyder kullanımı</li><li>Operatör belgesi zorunlu</li><li>G sınıfı ehliyet</li><li>En az 3 yıl deneyim</li></ul>` },
+      hafriyat: { title: 'Hafriyat Operatörü', desc: `<ul><li>Kazı ve yükleme operasyonları</li><li>Ekskavatör ve kırıcı kullanımı</li><li>Operatör belgesi</li><li>En az 2 yıl deneyim</li></ul>` },
+      genel: { title: 'Genel İşçi', desc: `<ul><li>Şantiyede yardımcı işler</li><li>Fiziksel yeterlilik</li><li>Ekip çalışmasına uyum</li><li>Deneyim tercih sebebi</li></ul>` },
+      form: { title: 'Formen / Usta Başı', desc: `<ul><li>Ekip yönetimi ve iş planlaması</li><li>Teknik çizim okuma</li><li>En az 5 yıl şantiye deneyimi</li><li>Liderlik becerileri</li></ul>` },
+      teknik: { title: 'Teknik Personel', desc: `<ul><li>İnşaat teknikeri veya ilgili bölüm mezunu</li><li>Metraj ve keşif bilgisi</li><li>MS Office ve AutoCAD</li><li>En az 2 yıl deneyim</li></ul>` }
+    };
+    
+    const select = document.getElementById('positionSelect');
+    const title = document.getElementById('positionTitle');
+    const desc = document.getElementById('positionDesc');
+    
+    select.addEventListener('change', function() {
+      const val = this.value;
+      title.textContent = positionData[val].title;
+      desc.innerHTML = positionData[val].desc;
+      document.getElementById('formPosition').value = positionData[val].title;
+    });
+    
+    // Form gönderimi
+    const form = document.getElementById('careerForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => { if (!field.value.trim()) { field.style.borderColor = '#EF4444'; valid = false; } else { field.style.borderColor = '#E5E7EB'; } });
+      if (!valid) { alert('Lütfen tüm zorunlu alanları doldurun.'); return; }
+      document.getElementById('successMessage').style.display = 'block';
+      form.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => { document.getElementById('successMessage').style.display = 'none'; }, 5000);
+    });
+    
+    document.getElementById('cvInput').addEventListener('change', function(e) {
+      const fileName = e.target.files[0]?.name;
+      if (fileName) document.querySelector('.file-upload-label p:first-of-type').textContent = `Seçilen: ${fileName}`;
+    });
+  </script>
+</body>
+</html>

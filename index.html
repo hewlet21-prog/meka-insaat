@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ME-KA İnşaat Erzurum | Hafriyat, Beton, Agrega | 40 Yıllık Güven</title>
+  <meta name="description" content="Erzurum'da hafriyat, beton, agrega ve altyapı projelerinde 40 yıllık tecrübe. ME-KA İnşaat ile güvenilir çözümler.">
+  <meta name="keywords" content="mek-a inşaat, erzurum inşaat, erzurum hafriyat, erzurum beton, erzurum agrega, yol yapımı, altyapı">
+  <meta name="author" content="ME-KA İnşaat">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="ME-KA İnşaat Erzurum | 40 Yıllık Güven">
+  <meta property="og:description" content="Hafriyat, beton, agrega ve altyapı projelerinde 40 yıllık tecrübe.">
+  <meta property="og:image" content="hizmetler/1.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="hizmetler/1.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* İstatistik kartları */
+    .stat-card {
+      background: linear-gradient(145deg, #1F2937 0%, #111827 100%);
+      padding: 1.2rem 0.8rem;
+      border-radius: 16px;
+      text-align: center;
+      border: 2px solid #F59E0B;
+      box-shadow: 0 8px 16px -4px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 24px -6px rgba(245,158,11,0.2);
+      border-color: #B45309;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #F59E0B;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #D1D5DB;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Hizmet kartları */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      padding: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0,0,0,0.12);
+    }
+    .service-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 1.2rem;
+    }
+    .service-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1F2937;
+      margin-bottom: 0.5rem;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: #4B5563;
+      margin-bottom: 0.75rem;
+    }
+    .service-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #F59E0B;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    /* Proje kartları */
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,0.15);
+    }
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 1.25rem;
+    }
+    .project-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-desc {
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-number { font-size: 1.8rem; }
+      .stats-grid { gap: 1rem; }
+    }
+  </style>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ME-KA İnşaat",
+    "image": "https://mekainsaat.com/hizmetler/1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2",
+      "addressLocality": "Yakutiye",
+      "addressRegion": "Erzurum",
+      "addressCountry": "TR"
+    },
+    "telephone": "+90 538 486 58 40",
+    "url": "https://mekainsaat.com"
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo"><span>ME-KA</span> İNŞAAT</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Hizmetler ▼</button>
+          <div class="dropdown-menu">
+            <a href="hizmetler/yikim.html">Yıkım</a>
+            <a href="hizmetler/hafriyat.html">Hafriyat</a>
+            <a href="hizmetler/agrega.html">Agrega</a>
+            <a href="hizmetler/beton.html">Beton</a>
+          </div>
+        </div>
+        <a href="projeler.html" class="nav-link">Projeler</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="kariyer.html" class="nav-link">Kariyer</a>
+        <a href="iletisim.html" class="nav-link">İletişim</a>
+      </nav>
+      <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="whatsapp-btn" target="_blank">📱 WhatsApp</a>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">Hizmetler ▼</button>
+        <div class="dropdown-menu">
+          <a href="hizmetler/yikim.html">Yıkım</a>
+          <a href="hizmetler/hafriyat.html">Hafriyat</a>
+          <a href="hizmetler/agrega.html">Agrega</a>
+          <a href="hizmetler/beton.html">Beton</a>
+        </div>
+      </div>
+      <a href="projeler.html">Projeler</a>
+      <a href="blog.html">Blog</a>
+      <a href="kariyer.html">Kariyer</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted playsinline poster="hizmetler/1.jpg">
+      <source src="videos/promo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo-text">
+        <span class="hero-brand">ME-KA İNŞAAT</span>
+      </div>
+      <h1 class="hero-title">
+        40 YILDIR GÜVENLE<br>
+        <span class="hero-keywords">HAFRİYAT · BETON · AGREGA</span>
+      </h1>
+      <p class="hero-subtitle">Erzurum'un altyapı ve inşaat çözüm ortağı</p>
+      <div class="hero-buttons">
+        <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
+        <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="btn btn-outline" target="_blank">WhatsApp'tan Yaz</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-indicator-inner">
+        <div class="scroll-indicator-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İstatistikler -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid" style="gap: 1.5rem;">
+        <div class="stat-card">
+          <div class="stat-number" data-count="40" data-suffix="+">0+</div>
+          <div class="stat-label">Yıllık Deneyim</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="350" data-suffix="+">0+</div>
+          <div class="stat-label">Tamamlanan Proje</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="52">0</div>
+          <div class="stat-label">Uzman Ekip</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hizmetler -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Hizmetlerimiz</h2>
+      <p class="section-subtitle">İnşaat sektöründe geniş yelpazede sunduğumuz kaliteli hizmetlerle projelerinize değer katıyoruz.</p>
+      <div class="services-grid">
+        <!-- Yıkım -->
+        <a href="hizmetler/yikim.html" class="service-card">
+          <img src="hizmetler/1.jpg" alt="Yıkım" class="service-img" onerror="this.src='https://via.placeholder.com/400x120/374151/F59E0B?text=Yıkım'">
+          <div class="service-content">
+            <div class="service-icon">🏚️</div>
+            <h3 class="service-title">Yıkım</h3>
+            <p class="service-desc">Kontrollü ve güvenli bina yıkım hizmetleri, profesyonel ekipmanlar.</p>
+            <span class="service-link">Detaylı Bilgi →</span>
+          </div>
+        </a>
+        <!-- Hafriyat -->
+        <a href="hizmetler/hafriyat.html" class="service-card">
+          <img src="hizmetler/2.jpg" alt="Hafriyat" class="service-img" onerror="this.src='https://via.placeholder.com/400x120/374151/F59E0B?text=Hafriyat'">
+          <div class="service-content">
+            <div class="service-icon">🚛</div>
+            <h3 class="service-title">Hafriyat</h3>
+            <p class="service-desc">Profesyonel kazı, dolgu ve hafriyat taşıma hizmetleri, modern filo.</p>
+            <span class="service-link">Detaylı Bilgi →</span>
+          </div>
+        </a>
+        <!-- Agrega -->
+        <a href="hizmetler/agrega.html" class="service-card">
+          <img src="hizmetler/3.jpg" alt="Agrega" class="service-img" onerror="this.src='https://via.placeholder.com/400x120/374151/F59E0B?text=Agrega'">
+          <div class="service-content">
+            <div class="service-icon">⛰️</div>
+            <h3 class="service-title">Agrega</h3>
+            <p class="service-desc">Yüksek kaliteli agrega üretimi ve satışı, çeşitli boyutlarda malzeme.</p>
+            <span class="service-link">Detaylı Bilgi →</span>
+          </div>
+        </a>
+        <!-- Beton -->
+        <a href="hizmetler/beton.html" class="service-card">
+          <img src="hizmetler/4.jpg" alt="Beton" class="service-img" onerror="this.src='https://via.placeholder.com/400x120/374151/F59E0B?text=Beton'">
+          <div class="service-content">
+            <div class="service-icon">🏭</div>
+            <h3 class="service-title">Beton</h3>
+            <p class="service-desc">Hazır beton ve özel beton çözümleri, C20-C50 arası tüm sınıflar.</p>
+            <span class="service-link">Detaylı Bilgi →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projeler -->
+  <section class="section bg-gray-50">
+    <div class="container">
+      <h2 class="section-title">Öne Çıkan Projeler</h2>
+      <p class="section-subtitle">Tamamladığımız projelerle Erzurum'un ve bölgenin gelişimine katkı sağlıyoruz.</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="hizmetler/ispir.jpg" alt="İspir Tünelleri" class="project-image" onerror="this.src='https://via.placeholder.com/400x200/374151/F59E0B?text=İspir+Tünelleri'">
+          <div class="project-content">
+            <h3 class="project-title">İspir Tünelleri Yapımı</h3>
+            <p class="project-desc">Erzurum-Artvin karayolu üzerinde yer alan İspir Tünelleri'nin hafriyat ve beton kaplama çalışmaları.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="hizmetler/ıgdır.jpg" alt="Iğdır Yol Yapımı" class="project-image" onerror="this.src='https://via.placeholder.com/400x200/374151/F59E0B?text=Iğdır+Yol+Yapımı'">
+          <div class="project-content">
+            <h3 class="project-title">Iğdır Yol Yapımı</h3>
+            <p class="project-desc">25 km'lik bölünmüş yol projesinde kazı, dolgu, agrega temini ve asfaltlama işleri.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="hizmetler/atatürk.jpg" alt="Atatürk Üni. Bağlantı Yolları" class="project-image" onerror="this.src='https://via.placeholder.com/400x200/374151/F59E0B?text=Atatürk+Üni+Yolları'">
+          <div class="project-content">
+            <h3 class="project-title">Atatürk Üniversitesi Yolları</h3>
+            <p class="project-desc">Kampüs içi ve çevre bağlantı yollarının altyapı, bordür ve asfalt işleri.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="projeler.html" class="btn btn-primary">Tüm Projeleri Gör</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Projenizi Birlikte Planlayalım</h2>
+      <p style="font-size: 1.25rem; margin-bottom: 1rem;">Hemen teklif alın veya WhatsApp'tan bize ulaşın.</p>
+      <div class="cta-buttons">
+        <a href="teklif-al.html" class="btn btn-primary">Teklif Al</a>
+        <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="btn btn-outline" target="_blank">WhatsApp'tan Yaz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yorumlar + Harita -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Müşteri Yorumları</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card"><p class="testimonial-text">"ME-KA İnşaat işini zamanında ve profesyonelce yaptı."</p><p class="testimonial-author">Ahmet Yılmaz</p><div class="testimonial-rating">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Hafriyat ve beton işlerimizde hep ME-KA'yı tercih ediyoruz."</p><p class="testimonial-author">Mehmet Demir</p><div class="testimonial-rating">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Yıkım işimizi sorunsuz hallettiler, çevreye duyarlılar."</p><p class="testimonial-author">Ayşe Kaya</p><div class="testimonial-rating">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Agrega tedariğimizde kalite ve teslimat harika."</p><p class="testimonial-author">Ali Öztürk</p><div class="testimonial-rating">★★★★★</div></div>
+      </div>
+      <h2 class="section-title" style="margin-top: 3rem;">Bize Ulaşın</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.332549878354!2d41.276937315364!3d39.903456979427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e2be8e5a5c5e7%3A0x4c4c4c4c4c4c4c4c!2sGez%20Mah.%20Orhan%20%C5%9Eerifsoy%20Cad.%20Nafiz%20Erg%C3%BCn%20Sok.%20Murat%20Apt.%20Kat%3A1%20No%3A2%2C%20Yakutiye%2FErzurum!5e0!3m2!1str!2str!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="text-center mt-4">
+        <p><strong>Adres:</strong> Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye / Erzurum</p>
+        <p><strong>Telefon:</strong> <a href="tel:+905384865840">0538 486 58 40</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><span>ME-KA</span> İNŞAAT</div>
+          <p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı. 40 yıllık tecrübemizle projelerinize değer katıyoruz.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Hızlı Linkler</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="projeler.html">Projeler</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="kariyer.html">Kariyer</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Hizmetlerimiz</h4>
+          <ul class="footer-links">
+            <li><a href="hizmetler/yikim.html">Yıkım</a></li>
+            <li><a href="hizmetler/hafriyat.html">Hafriyat</a></li>
+            <li><a href="hizmetler/agrega.html">Agrega</a></li>
+            <li><a href="hizmetler/beton.html">Beton</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">İletişim</h4>
+          <div class="footer-contact">
+            <p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p>
+            <p>📞 <a href="tel:+905384865840">0538 486 58 40</a></p>
+            <p>✉️ <a href="mailto:ubeyd.atalay@me-kainsaat.com">ubeyd.atalay@me-kainsaat.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ME-KA İnşaat. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="whatsapp-float" target="_blank">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
+
+  <div class="sticky-contact">
+    <div class="container">
+      <a href="tel:+905384865840">📞 Hemen Ara</a>
+      <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." target="_blank">💬 WhatsApp</a>
+      <a href="teklif-al.html" class="btn-primary">Teklif Al</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // İstatistik sayı animasyonu
+    document.addEventListener('DOMContentLoaded', function() {
+      const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-count'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            let current = 0;
+            const increment = target / 40;
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                el.textContent = target + suffix;
+                clearInterval(timer);
+              } else {
+                el.textContent = Math.floor(current) + suffix;
+              }
+            }, 20);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      statNumbers.forEach(el => observer.observe(el));
+      
+      // Mobil menü toggle
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
