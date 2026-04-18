@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Ana Sayfa -->
+  <url>
+    <loc>https://me-kainsaat.com/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <!-- Kurumsal Sayfalar -->
+  <url>
+    <loc>https://me-kainsaat.com/hakkimizda</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/projeler</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/kariyer</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/iletisim</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Hizmetler -->
+  <url>
+    <loc>https://me-kainsaat.com/hizmetler/yikim</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/hizmetler/hafriyat</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/hizmetler/agrega</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://me-kainsaat.com/hizmetler/beton</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Blog Ana Sayfa -->
+  <url>
+    <loc>https://me-kainsaat.com/blog</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Blog Yazıları - Beton -->
+  <url><loc>https://me-kainsaat.com/c20-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/c25-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/c30-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/c35-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/hazir-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-turleri</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-fiyat-hesaplama</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/erzurum-beton-fiyatlari</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-dayanim-siniflari</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-kalitesi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-catlak</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-katki-maddeleri</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-omru</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <!-- Blog Yazıları - Agrega -->
+  <url><loc>https://me-kainsaat.com/agrega-nedir</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/kum-cesitleri</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/micir-nedir</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-icin-kum</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/dolgu-malzemesi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/stabilize-malzeme</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/kum-fiyati-erzurum</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/micir-fiyatlari-erzurum</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/agrega-secimi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <!-- Blog Yazıları - Hafriyat -->
+  <url><loc>https://me-kainsaat.com/hafriyat-nedir</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/kepce-kiralama</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/ekskavator-nedir</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/temel-kazisi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/hafriyat-kamyonu</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/moloz-tasima</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/zemin-duzeltme</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <!-- Blog Yazıları - Satış Rehberi -->
+  <url><loc>https://me-kainsaat.com/beton-firmasi-secimi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/hazir-beton-siparisi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/beton-dokumu-oncesi</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/100-m2-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/insaat-maliyeti</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <!-- Blog Yazıları - Erzurum Özel -->
+  <url><loc>https://me-kainsaat.com/kis-beton-dokumu</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/insaat-sezonu</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/don-olayi-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://me-kainsaat.com/en-dayanikli-beton</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+</urlset>

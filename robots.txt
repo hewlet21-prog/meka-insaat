@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://me-kainsaat.com/sitemap.xml
