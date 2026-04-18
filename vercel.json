@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/services/hafriyat-erzurum", "destination": "/hizmetler/hafriyat", "permanent": true },
+    { "source": "/beton-bordur-kaldirim", "destination": "/hizmetler/beton", "permanent": true }
+  ]
 }
