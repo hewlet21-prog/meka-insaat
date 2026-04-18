@@ -12,297 +12,89 @@
   <meta property="og:image" content="hizmetler/1.jpg">
   <link rel="icon" type="image/x-icon" href="hizmetler/1.jpg">
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- ContactPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "İletişim | ME-KA İnşaat Erzurum",
+    "description": "ME-KA İnşaat ile iletişime geçin. Erzurum’da inşaat, hafriyat ve altyapı projeleriniz için profesyonel çözümler.",
+    "url": "https://me-kainsaat.com/iletisim",
+    "mainEntity": {
+      "@type": "GeneralContractor",
+      "name": "ME-KA İnşaat",
+      "telephone": "+905384865840",
+      "email": "ubeyd.atalay@me-kainsaat.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2",
+        "addressLocality": "Yakutiye",
+        "addressRegion": "Erzurum"
+      }
+    }
+  }
+  </script>
+  
   <style>
-    /* ---------- RESET & GENEL ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #F9FAFB;
-      color: #1F2937;
-      line-height: 1.5;
-    }
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    :root {
-      --primary: #F59E0B;
-      --primary-dark: #B45309;
-      --primary-light: #FDE68A;
-      --dark: #1F2937;
-      --gray-50: #F9FAFB;
-      --gray-200: #E5E7EB;
-      --gray-600: #4B5563;
-      --shadow-md: 0 8px 20px rgba(0,0,0,0.04);
-      --shadow-lg: 0 20px 30px -8px rgba(0,0,0,0.08);
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #F9FAFB; color: #1F2937; line-height: 1.5; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    :root { --primary: #F59E0B; --primary-dark: #B45309; --primary-light: #FDE68A; --dark: #1F2937; --gray-50: #F9FAFB; --gray-200: #E5E7EB; --gray-600: #4B5563; --shadow-md: 0 8px 20px rgba(0,0,0,0.04); --shadow-lg: 0 20px 30px -8px rgba(0,0,0,0.08); }
 
-    /* ---------- HEADER (UYUMLU) ---------- */
-    .header {
-      background: #111827;
-      backdrop-filter: blur(8px);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: white;
-    }
+    .header { background: #111827; backdrop-filter: blur(8px); color: white; position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .header-container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+    .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
     .logo span { color: var(--primary); }
     .nav-menu { display: flex; gap: 2rem; align-items: center; }
     .nav-link { color: white; text-decoration: none; font-weight: 500; transition: color 0.2s; }
     .nav-link:hover { color: var(--primary); }
     .dropdown { position: relative; }
-    .dropdown-toggle {
-      background: none; border: none; color: white; font-weight: 500;
-      font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 4px;
-    }
-    .dropdown-menu {
-      position: absolute; top: 100%; left: 0; margin-top: 0.5rem; width: 200px;
-      background: #374151; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      border: 1px solid #4B5563; padding: 0.5rem 0; opacity: 0; visibility: hidden;
-      transform: translateY(-10px); transition: all 0.2s;
-    }
+    .dropdown-toggle { background: none; border: none; color: white; font-weight: 500; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 4px; }
+    .dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 0.5rem; width: 200px; background: #374151; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #4B5563; padding: 0.5rem 0; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.2s; }
     .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-    .dropdown-menu a {
-      display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;
-    }
+    .dropdown-menu a { display: block; padding: 0.5rem 1rem; color: white; text-decoration: none; }
     .dropdown-menu a:hover { background: rgba(245,158,11,0.2); color: var(--primary); }
-    .whatsapp-btn {
-      display: flex; align-items: center; gap: 8px; background: var(--primary);
-      color: #111827; padding: 0.5rem 1.2rem; border-radius: 40px;
-      font-weight: 600; text-decoration: none;
-    }
+    .whatsapp-btn { display: flex; align-items: center; gap: 8px; background: var(--primary); color: #111827; padding: 0.5rem 1.2rem; border-radius: 40px; font-weight: 600; text-decoration: none; }
     .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
     .mobile-menu { display: none; padding: 1rem 0; background: #111827; flex-direction: column; gap: 0.8rem; }
 
-    /* ---------- 1. HERO + HIZLI İLETİŞİM ---------- */
-    .hero-section {
-      padding: 4rem 0 2rem;
-      background: white;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: var(--gray-600);
-    }
-    .quick-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .big-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      padding: 1.2rem 1.5rem;
-      border-radius: 60px;
-      font-size: 1.25rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      border: 2px solid transparent;
-    }
-    .btn-call {
-      background: var(--dark);
-      color: white;
-      border-color: var(--dark);
-    }
-    .btn-call:hover {
-      background: #374151;
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    .btn-wa {
-      background: #25D366;
-      color: #111827;
-      border-color: #25D366;
-    }
-    .btn-wa:hover {
-      background: #20b859;
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
+    .hero-section { padding: 4rem 0 2rem; background: white; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center; }
+    .hero-title { font-size: 3rem; font-weight: 800; color: var(--dark); margin-bottom: 1rem; line-height: 1.2; }
+    .hero-subtitle { font-size: 1.2rem; color: var(--gray-600); }
+    .quick-actions { display: flex; flex-direction: column; gap: 1rem; }
+    .big-btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 1.2rem 1.5rem; border-radius: 60px; font-size: 1.25rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 2px solid transparent; }
+    .btn-call { background: var(--dark); color: white; border-color: var(--dark); }
+    .btn-call:hover { background: #374151; transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .btn-wa { background: #25D366; color: #111827; border-color: #25D366; }
+    .btn-wa:hover { background: #20b859; transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 
-    /* ---------- 2. HARİTA + FORM (AYNI YÜKSEKLİK) ---------- */
-    .map-form-section {
-      padding: 3rem 0;
-    }
-    .two-col-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: stretch;
-    }
-    .map-card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      display: flex;
-      flex-direction: column;
-    }
-    .map-card iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-      border: 0;
-      display: block;
-    }
-    .form-card {
-      background: white;
-      padding: 2rem 2rem;
-      border-radius: 20px;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--gray-200);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .form-card h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-    }
-    .form-card > p {
-      color: var(--gray-600);
-      margin-bottom: 2rem;
-    }
-    .input-group {
-      margin-bottom: 1.5rem;
-    }
-    .input-group input,
-    .input-group textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 16px;
-      font-size: 1rem;
-      background: var(--gray-50);
-      transition: all 0.2s;
-    }
-    .input-group input:focus,
-    .input-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      background: white;
-      box-shadow: 0 0 0 3px rgba(245,158,11,0.1);
-    }
-    .input-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    .submit-btn {
-      background: var(--primary);
-      color: var(--dark);
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      width: 100%;
-    }
-    .submit-btn:hover {
-      background: var(--primary-dark);
-      transform: scale(1.02);
-    }
+    .map-form-section { padding: 3rem 0; }
+    .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; }
+    .map-card { background: white; border-radius: 20px; box-shadow: var(--shadow-md); overflow: hidden; border: 1px solid var(--gray-200); display: flex; flex-direction: column; }
+    .map-card iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+    .form-card { background: white; padding: 2rem 2rem; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--gray-200); display: flex; flex-direction: column; justify-content: center; }
+    .form-card h2 { font-size: 2rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+    .form-card > p { color: var(--gray-600); margin-bottom: 2rem; }
+    .input-group { margin-bottom: 1.5rem; }
+    .input-group input, .input-group textarea { width: 100%; padding: 1rem 1.2rem; border: 1.5px solid var(--gray-200); border-radius: 16px; font-size: 1rem; background: var(--gray-50); transition: all 0.2s; }
+    .input-group input:focus, .input-group textarea:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 3px rgba(245,158,11,0.1); }
+    .input-group textarea { min-height: 120px; resize: vertical; }
+    .submit-btn { background: var(--primary); color: var(--dark); padding: 1rem 2rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; width: 100%; }
+    .submit-btn:hover { background: var(--primary-dark); transform: scale(1.02); }
 
-    /* ---------- 3. İLETİŞİM KARTLARI (ALTTA) ---------- */
-    .cards-section {
-      padding: 2rem 0 5rem;
-    }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.8rem;
-    }
-    .contact-card {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 20px;
-      box-shadow: var(--shadow-md);
-      text-align: center;
-      border: 1px solid var(--gray-200);
-      transition: all 0.2s;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-    }
-    .contact-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary-light);
-    }
-    .card-icon {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-    }
-    .contact-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .card-content {
-      font-size: 1rem;
-      color: var(--gray-600);
-      margin-bottom: 0.5rem;
-      word-break: break-word;
-    }
-    .card-footer {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-    }
+    .cards-section { padding: 2rem 0 5rem; }
+    .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.8rem; }
+    .contact-card { background: white; padding: 2rem 1rem; border-radius: 20px; box-shadow: var(--shadow-md); text-align: center; border: 1px solid var(--gray-200); transition: all 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; height: 100%; }
+    .contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+    .card-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+    .contact-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card-content { font-size: 1rem; color: var(--gray-600); margin-bottom: 0.5rem; word-break: break-word; }
+    .card-footer { margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark); }
 
-    /* ---------- FOOTER ---------- */
-    .footer {
-      background: #111827;
-      color: white;
-      padding: 3rem 0 2rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
+    .footer { background: #111827; color: white; padding: 3rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
     .footer-logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
     .footer-logo span { color: var(--primary); }
     .footer-desc { color: #9CA3AF; }
@@ -314,30 +106,13 @@
     .footer-contact p { display: flex; align-items: center; gap: 0.6rem; color: #9CA3AF; margin-bottom: 0.6rem; }
     .footer-bottom { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #374151; color: #9CA3AF; }
 
-    /* ---------- STICKY WHATSAPP & CONTACT BAR ---------- */
-    .whatsapp-float {
-      position: fixed; bottom: 30px; right: 30px; z-index: 100;
-      background: #25D366; color: white; width: 60px; height: 60px;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2); transition: transform 0.2s;
-    }
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.2); transition: transform 0.2s; }
     .whatsapp-float:hover { transform: scale(1.1); }
-    .sticky-contact {
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
-      background: #111827; color: white; padding: 0.8rem 0; display: none;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-    }
-    .sticky-contact .container {
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .sticky-contact a {
-      color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;
-    }
+    .sticky-contact { position: fixed; bottom: 0; left: 0; right: 0; z-index: 40; background: #111827; color: white; padding: 0.8rem 0; display: none; box-shadow: 0 -4px 10px rgba(0,0,0,0.1); }
+    .sticky-contact .container { display: flex; align-items: center; justify-content: space-between; }
+    .sticky-contact a { color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 1024px) {
-      .cards-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 1024px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) {
       .nav-menu { display: none; }
       .mobile-menu-btn { display: block; }
@@ -353,7 +128,6 @@
   </style>
 </head>
 <body>
-  <!-- HEADER -->
   <header class="header">
     <div class="container header-container">
       <a href="index.html" class="logo"><span>ME-KA</span> İNŞAAT</a>
@@ -378,26 +152,13 @@
       <button class="mobile-menu-btn">☰</button>
     </div>
     <div class="mobile-menu">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <div class="dropdown">
-        <button class="dropdown-toggle">Hizmetler ▼</button>
-        <div class="dropdown-menu">
-          <a href="hizmetler/yikim.html">Yıkım</a>
-          <a href="hizmetler/hafriyat.html">Hafriyat</a>
-          <a href="hizmetler/agrega.html">Agrega</a>
-          <a href="hizmetler/beton.html">Beton</a>
-        </div>
-      </div>
-      <a href="projeler.html">Projeler</a>
-      <a href="blog.html">Blog</a>
-      <a href="kariyer.html">Kariyer</a>
-      <a href="iletisim.html">İletişim</a>
+      <a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a>
+      <div class="dropdown"><button class="dropdown-toggle">Hizmetler ▼</button><div class="dropdown-menu"><a href="hizmetler/yikim.html">Yıkım</a><a href="hizmetler/hafriyat.html">Hafriyat</a><a href="hizmetler/agrega.html">Agrega</a><a href="hizmetler/beton.html">Beton</a></div></div>
+      <a href="projeler.html">Projeler</a><a href="blog.html">Blog</a><a href="kariyer.html">Kariyer</a><a href="iletisim.html">İletişim</a>
     </div>
   </header>
 
   <main>
-    <!-- 1. HERO + HIZLI İLETİŞİM -->
     <section class="hero-section">
       <div class="container hero-grid">
         <div>
@@ -411,28 +172,19 @@
       </div>
     </section>
 
-    <!-- 2. HARİTA + FORM (AYNI YÜKSEKLİK) -->
     <section class="map-form-section">
       <div class="container">
         <div class="two-col-grid">
-          <!-- SOL: GOOGLE MAPS -->
           <div class="map-card">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.332549878354!2d41.276937315364!3d39.903456979427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e2be8e5a5c5e7%3A0x4c4c4c4c4c4c4c4c!2sGez%20Mah.%20Orhan%20%C5%9Eerifsoy%20Cad.%20Nafiz%20Erg%C3%BCn%20Sok.%20Murat%20Apt.%20Kat%3A1%20No%3A2%2C%20Yakutiye%2FErzurum!5e0!3m2!1str!2str!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.332549878354!2d41.276937315364!3d39.903456979427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e2be8e5a5c5e7%3A0x4c4c4c4c4c4c4c4c!2sGez%20Mah.%20Orhan%20%C5%9Eerifsoy%20Cad.%20Nafiz%20Erg%C3%BCn%20Sok.%20Murat%20Apt.%20Kat%3A1%20No%3A2%2C%20Yakutiye%2FErzurum!5e0!3m2!1str!2str!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
           </div>
-          <!-- SAĞ: TEKLİF FORMU -->
           <div class="form-card">
             <h2>Teklif Alın</h2>
             <p>İşinizin detaylarını paylaşın, size en uygun çözümü sunalım</p>
             <form id="offerForm" action="https://formspree.io/f/ubeyd.atalay@me-kainsaat.com" method="POST">
-              <div class="input-group">
-                <input type="text" name="adsoyad" placeholder="Ad Soyad" required>
-              </div>
-              <div class="input-group">
-                <input type="tel" name="telefon" placeholder="Telefon" required>
-              </div>
-              <div class="input-group">
-                <textarea name="mesaj" placeholder="Mesaj" required></textarea>
-              </div>
+              <div class="input-group"><input type="text" name="adsoyad" placeholder="Ad Soyad" required></div>
+              <div class="input-group"><input type="tel" name="telefon" placeholder="Telefon" required></div>
+              <div class="input-group"><textarea name="mesaj" placeholder="Mesaj" required></textarea></div>
               <button type="submit" class="submit-btn">Teklif Al</button>
             </form>
           </div>
@@ -440,140 +192,49 @@
       </div>
     </section>
 
-    <!-- 3. İLETİŞİM KARTLARI -->
     <section class="cards-section">
       <div class="container">
         <div class="cards-grid">
-          <!-- Telefon -->
-          <a href="tel:+905384865840" class="contact-card">
-            <div class="card-icon">📞</div>
-            <h3>Telefon</h3>
-            <div class="card-content">0538 486 58 40</div>
-            <div class="card-footer">Hemen Arayın →</div>
-          </a>
-          <!-- WhatsApp -->
-          <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." target="_blank" class="contact-card">
-            <div class="card-icon">💬</div>
-            <h3>WhatsApp</h3>
-            <div class="card-content">0538 486 58 40</div>
-            <div class="card-footer">Anında Yazın →</div>
-          </a>
-          <!-- E-posta -->
-          <a href="mailto:ubeyd.atalay@me-kainsaat.com" class="contact-card">
-            <div class="card-icon">✉️</div>
-            <h3>E-posta</h3>
-            <div class="card-content" style="font-size:0.95rem;">ubeyd.atalay@me-kainsaat.com</div>
-            <div class="card-footer">24 Saat İçinde Dönüş →</div>
-          </a>
-          <!-- Adres -->
-          <div class="contact-card">
-            <div class="card-icon">📍</div>
-            <h3>Adres</h3>
-            <div class="card-content">Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye / Erzurum</div>
-            <div class="card-footer">Konumu Gör →</div>
-          </div>
+          <a href="tel:+905384865840" class="contact-card"><div class="card-icon">📞</div><h3>Telefon</h3><div class="card-content">0538 486 58 40</div><div class="card-footer">Hemen Arayın →</div></a>
+          <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." target="_blank" class="contact-card"><div class="card-icon">💬</div><h3>WhatsApp</h3><div class="card-content">0538 486 58 40</div><div class="card-footer">Anında Yazın →</div></a>
+          <a href="mailto:ubeyd.atalay@me-kainsaat.com" class="contact-card"><div class="card-icon">✉️</div><h3>E-posta</h3><div class="card-content">ubeyd.atalay@me-kainsaat.com</div><div class="card-footer">24 Saat İçinde Dönüş →</div></a>
+          <div class="contact-card"><div class="card-icon">📍</div><h3>Adres</h3><div class="card-content">Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye / Erzurum</div><div class="card-footer">Konumu Gör →</div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-logo"><span>ME-KA</span> İNŞAAT</div>
-          <p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı.</p>
-        </div>
-        <div>
-          <h4 class="footer-title">Hızlı Linkler</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="projeler.html">Projeler</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="kariyer.html">Kariyer</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Hizmetlerimiz</h4>
-          <ul class="footer-links">
-            <li><a href="hizmetler/yikim.html">Yıkım</a></li>
-            <li><a href="hizmetler/hafriyat.html">Hafriyat</a></li>
-            <li><a href="hizmetler/agrega.html">Agrega</a></li>
-            <li><a href="hizmetler/beton.html">Beton</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">İletişim</h4>
-          <div class="footer-contact">
-            <p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p>
-            <p>📞 <a href="tel:+905384865840" style="color:white">0538 486 58 40</a></p>
-          </div>
-        </div>
+        <div><div class="footer-logo"><span>ME-KA</span> İNŞAAT</div><p class="footer-desc">Erzurum'un güvenilir inşaat ve altyapı çözüm ortağı.</p></div>
+        <div><h4 class="footer-title">Hızlı Linkler</h4><ul class="footer-links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="projeler.html">Projeler</a></li><li><a href="blog.html">Blog</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+        <div><h4 class="footer-title">Hizmetlerimiz</h4><ul class="footer-links"><li><a href="hizmetler/yikim.html">Yıkım</a></li><li><a href="hizmetler/hafriyat.html">Hafriyat</a></li><li><a href="hizmetler/agrega.html">Agrega</a></li><li><a href="hizmetler/beton.html">Beton</a></li></ul></div>
+        <div><h4 class="footer-title">İletişim</h4><div class="footer-contact"><p>📍 Gez Mah. Orhan Şerifsoy Cad. Nafiz Ergün Sok. Murat Apt. Kat:1 No:2, Yakutiye/Erzurum</p><p>📞 <a href="tel:+905384865840">0538 486 58 40</a></p><p>✉️ <a href="mailto:ubeyd.atalay@me-kainsaat.com">ubeyd.atalay@me-kainsaat.com</a></p></div></div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 ME-KA İnşaat. Tüm hakları saklıdır.</p>
-      </div>
+      <div class="footer-bottom"><p>&copy; 2026 ME-KA İnşaat.</p></div>
     </div>
   </footer>
 
-  <!-- STICKY WHATSAPP -->
-  <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="whatsapp-float" target="_blank">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-  </a>
+  <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." class="whatsapp-float" target="_blank"><svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+  <div class="sticky-contact"><div class="container"><a href="tel:+905384865840">📞 Hemen Ara</a><a href="https://wa.me/905384865840">💬 WhatsApp</a><a href="teklif-al.html" class="btn-primary">Teklif Al</a></div></div>
 
-  <!-- STICKY MOBİL BAR -->
-  <div class="sticky-contact">
-    <div class="container">
-      <a href="tel:+905384865840">📞 Hemen Ara</a>
-      <a href="https://wa.me/905384865840?text=Merhaba%2C%20ME-KA%20%C4%B0N%C5%9EAAT%20hakk%C4%B1nda%20dan%C4%B1%C5%9Fmak%20istiyorum." target="_blank">💬 WhatsApp</a>
-      <a href="#offerForm" class="btn-primary" style="background:var(--primary); padding:0.5rem 1.5rem; border-radius:40px; color:#111;">Teklif Al</a>
-    </div>
-  </div>
-
-  <!-- BASİT VALİDASYON + MOBİL MENÜ -->
+  <script src="js/main.js"></script>
   <script>
     (function() {
-      // Mobil menü toggle
       const menuBtn = document.querySelector('.mobile-menu-btn');
       const mobileMenu = document.querySelector('.mobile-menu');
-      if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('active');
-        });
-      }
-
-      // Form validasyonu
+      if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
       const form = document.getElementById('offerForm');
       if (form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           const inputs = form.querySelectorAll('[required]');
           let valid = true;
-          inputs.forEach(input => {
-            if (!input.value.trim()) {
-              input.style.borderColor = '#EF4444';
-              valid = false;
-            } else {
-              input.style.borderColor = '#E5E7EB';
-            }
-          });
-          const phone = form.querySelector('input[name="telefon"]');
-          if (phone && phone.value.trim()) {
-            const phoneRegex = /^[0-9\s\+\-\(\)]{10,}$/;
-            if (!phoneRegex.test(phone.value.replace(/\s/g, ''))) {
-              phone.style.borderColor = '#EF4444';
-              valid = false;
-            }
-          }
-          if (!valid) {
-            alert('Lütfen tüm alanları doğru doldurun.');
-            return;
-          }
+          inputs.forEach(i => { if (!i.value.trim()) { i.style.borderColor = '#EF4444'; valid = false; } else i.style.borderColor = '#E5E7EB'; });
+          if (!valid) { alert('Lütfen zorunlu alanları doldurun.'); return; }
           form.submit();
-          alert('✅ Teklif talebiniz başarıyla gönderildi! En kısa sürede dönüş yapacağız.');
+          alert('✅ Teklif talebiniz başarıyla gönderildi!');
           form.reset();
         });
       }
